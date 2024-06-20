@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () {  
+
+    $nome = "Matheus";
+    $idade = 29;
+
+    return view('welcome', ['nome' => $nome, 'idade' => $idade, 'profissao' => 'programador']);
+});
+
+Route::get('/contact', function () {  //ponta inicial que o usuário acessa, o que se coloca na url
+    return view('contact');
+});
+
+Route::get('/produtos', function () {
+    return view('products');
 });
