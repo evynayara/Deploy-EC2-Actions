@@ -13,24 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {  
+use App\Http\Controllers\EventController;
 
-    $nome = "Matheus";
-    $idade = 29;
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
-    $arr = [10,20,30,40,50];
-
-    $nomes = ["Matheus", "Maria", "João", "Saulo"];
-
-    return view('welcome', 
-    [
-        'nome' => $nome, 
-        'idade' => $idade, 
-        'profissao' => 'programador',
-        'arr' => $arr,
-        'nomes' => $nomes
-    ]);
-});
 
 Route::get('/contact', function () {  //ponta inicial que o usuário acessa, o que se coloca na url
     return view('contact');
