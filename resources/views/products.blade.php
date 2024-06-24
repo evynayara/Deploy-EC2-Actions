@@ -1,22 +1,9 @@
+@extends('layouts.main')
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', 'Produtos')
 
-        <title>Laravel</title>
+@section('content')
 
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"> </script>
-
-    </head>
-    <body class="antialiased">
-
-
-       
 <h1> Tela de Produtos </h1>
 
-</body>
-
-</head>
+@endsection
