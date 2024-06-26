@@ -22,14 +22,3 @@ Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/contact', function () {  //ponta inicial que o usuário acessa, o que se coloca na url
     return view('contact');
 });
-
-Route::get('/produtos', function () {
-
-    $busca = request('search');
-
-    return view('products', ['busca' => $busca]);
-});
-
-Route::get('/produtos_teste/{id?}', function ($id = null) {
-    return view('product', ['id' => $id]);
-});
